@@ -87,6 +87,36 @@ Frontend URL: http://localhost:3000
 | POST   | `/tasks`     | Create a new task   |
 | PUT    | `/tasks/:id` | Update a task by ID |
 | DELETE | `/tasks/:id` | Delete a task by ID |
+### You can also test the api endpoints by creating .http file as below
+``` .HTTP
+GET http://localhost:3001/tasks
+
+###
+POST http://localhost:3001/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Fix Login Bug",
+  "description": "Resolve the issue in user login feature in the frontend",
+  "status": "completed",
+  "dueDate": "2025-06-18"
+}
+
+###
+PUT http://localhost:3001/tasks/b737734f-2c7d-4f4c-9799-db251e40bc6f
+Content-Type: application/json
+Accept: application/json
+
+{
+    "status": "done"
+}
+
+###
+DELETE http://localhost:3001/tasks/b737734f-2c7d-4f4c-9799-db251e40bc6f
+
+
+```
 ### Frontend Pages
 | Route       | Description                          |
 | ----------- | ------------------------------------ |
